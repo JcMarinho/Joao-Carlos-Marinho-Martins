@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eletrônicos do jc | Informática e Smartphones</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="toast-notificacao" class="toast">Produto adicionado ao carrinho!</div>
+    <header>
+    <div class="header-container">
+    <div class="logo">
+    <h1>ELETRÔNICOS DO <span>jc</span></h1>
+    </div>
+    <div class="busca">
+    <input type="text" placeholder="O que você está procurando?">
+    <button>🔍</button>
+    </div>
+    <button class="carrinho" id="btn-carrinho" type="button" aria-label="Abrir carrinho">
+    🛒 Meu Carrinho
+    <span class="badge" id="contador-carrinho">0</span>
+    </button>
+    </div>
+    <nav>
+    <ul>
+    <li><a href="#hardware">DEPARTAMENTO DE HARDWARE</a></li>
+    <li><a href="#smartphones">SMARTPHONES GAMER</a></li>
+    <li><a href="#perifericos">PERIFÉRICOS</a></li>
+    <li><a href="#ofertas" class="destaque-menu">% OFERTAS</a></li>
+    </ul>
+    </nav>
+    </header>
+    <main>
+    <section class="banner">
+    <div class="banner-conteudo">
+    <h2>O SEU UPGRADE COMEÇA AQUI</h2>
+    <p>Equipamentos de alta performance para quem não aceita menos que o melhor.</p>
+    <a href="#produtos" class="btn-banner">VER OFERTAS</a>
+    </div>
+    </section>
+    <section id="produtos" class="vitrine">
+    <div class="titulo-secao">
+    <h2>🔥 OFERTAS EM DESTAQUE</h2>
+    <div class="linha-detalhe"></div>
+    </div>
+
+    <div class="grid-produtos">
+    
+    <div class="card-produto">
+    <a href="#poco-x6" class="link-produto">
+    <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=400&q=80" alt="Smartphone">
+    <div class="info-produto">
+    <span class="categoria">Smartphones</span>
+    <h3>Smartphone Poco X6 Pro 5G 256GB</h3>
+    <p class="preco-antigo">De R$ 2.499,00 por:</p>
+    <p class="preco-novo">R$ 1.950,00</p>
+    <p class="pagamento">à vista no PIX</p>
+    </div>
+    </a>
+    <button class="btn-comprar" onclick="adicionarAoCarrinho('Poco X6 Pro', 1950.00, 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=400&q=80')">🛒 COMPRAR</button>
+    </div>
+
+    <div class="card-produto">
+    <a href="#redmagic" class="link-produto">
+    <img src="https://imgs.search.brave.com/an55K_Js66aKvOSDMJsyPSOk9vYB_BIXCksPEEE5-Ds/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9OUV9OUF82/MDYwODItTUxVNzcx/MTQwMDE1NTBfMDYy/MDI0LU8ud2VicA" alt="Smartphone Gamer">
+    <div class="info-produto">
+    <span class="categoria">Smartphones</span>
+    <h3>Smartphone RedMagic 9 Pro 16GB RAM</h3>
+    <p class="preco-antigo">De R$ 5.999,00 por:</p>
+    <p class="preco-novo">R$ 4.500,00</p>
+    <p class="pagamento">à vista no PIX</p>
+    </div>
+    </a>
+    <button class="btn-comprar" onclick="adicionarAoCarrinho('RedMagic 9 Pro', 4500.00, 'https://imgs.search.brave.com/an55K_Js66aKvOSDMJsyPSOk9vYB_BIXCksPEEE5-Ds/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9OUV9OUF82/MDYwODItTUxVNzcx/MTQwMDE1NTBfMDYy/MDI0LU8ud2VicA')">🛒 COMPRAR</button>
+    </div>
+
+    <div class="card-produto">
+    <a href="#rtx4060" class="link-produto">
+    <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=400&q=80" alt="Placa de Vídeo">
+    <div class="info-produto">
+    <span class="categoria">Hardware</span>
+    <h3>Placa de Vídeo RTX 4060 8GB GDDR6</h3>
+    <p class="preco-antigo">De R$ 2.399,00 por:</p>
+    <p class="preco-novo">R$ 1.899,00</p>
+    <p class="pagamento">à vista no PIX</p>
+    </div>
+    </a>
+    <button class="btn-comprar" onclick="adicionarAoCarrinho('RTX 4060', 1899.00, 'https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=400&q=80')">🛒 COMPRAR</button>
+    </div>
+
+    <div class="card-produto">
+    <a href="#ryzen7" class="link-produto">
+    <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=400&q=80" alt="Processador">
+    <div class="info-produto">
+    <span class="categoria">Hardware</span>
+    <h3>Processador AMD Ryzen 7 5700X</h3>
+    <p class="preco-antigo">De R$ 1.499,00 por:</p>
+    <p class="preco-novo">R$ 1.150,00</p>
+    <p class="pagamento">à vista no PIX</p>
+    </div>
+    </a>
+    <button class="btn-comprar" onclick="adicionarAoCarrinho('Ryzen 7 5700X', 1150.00, 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=400&q=80')">🛒 COMPRAR</button>
+    </div>
+
+    <div class="card-produto">
+    <a href="#monitor" class="link-produto">
+    <img src="https://imgs.search.brave.com/DqyJx5sIiaNjrsC4cHRB5_bZBSlGNGR2f22NhBmMu7A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/dGVyYWJ5dGVzaG9w/LmNvbS5ici9wcm9k/dXRvL2cvbW9uaXRv/ci1nYW1lci1hb2Mt/aGVyby0yNC1wb2wt/ZnVsbC1oZC0xNDRo/ei1pcHMtMW1zLXZn/YWhkbWlkcC0yNGcy/YmtfMTMxODI1Lmpw/Zw" alt="Monitor Gamer">
+    <div class="info-produto">
+    <span class="categoria">Monitores</span>
+    <h3>Monitor Gamer AOC Hero 24" 144Hz</h3>
+    <p class="preco-antigo">De R$ 1.199,00 por:</p>
+    <p class="preco-novo">R$ 849,00</p>
+    <p class="pagamento">à vista no PIX</p>
+    </div>
+    </a>
+    <button class="btn-comprar" onclick="adicionarAoCarrinho('Monitor AOC 144Hz', 849.00, 'https://imgs.search.brave.com/DqyJx5sIiaNjrsC4cHRB5_bZBSlGNGR2f22NhBmMu7A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/dGVyYWJ5dGVzaG9w/LmNvbS5ici9wcm9k/dXRvL2cvbW9uaXRv/ci1nYW1lci1hb2Mt/aGVyby0yNC1wb2wt/ZnVsbC1oZC0xNDRo/ei1pcHMtMW1zLXZn/YWhkbWlkcC0yNGcy/YmtfMTMxODI1Lmpw/Zw')">🛒 COMPRAR</button>
+    </div>
+
+    <div class="card-produto">
+    <a href="#placamae" class="link-produto">
+    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=400&q=80" alt="Placa Mãe">
+    <div class="info-produto">
+    <span class="categoria">Hardware</span>
+    <h3>Placa Mãe Gigabyte B550M Aorus Elite</h3>
+    <p class="preco-antigo">De R$ 999,00 por:</p>
+    <p class="preco-novo">R$ 799,00</p>
+    <p class="pagamento">à vista no PIX</p>
+    </div>
+    </a>
+    <button class="btn-comprar" onclick="adicionarAoCarrinho('Placa Mãe B550M', 799.00, 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=400&q=80')">🛒 COMPRAR</button>
+    </div>
+
+    <div class="card-produto">
+    <a href="#memoria" class="link-produto">
+    <img src="https://imgs.search.brave.com/AhqJTRyMKpiBlwTYXJpVuWdjS_Q2khTT3gDPnMLl_FE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMua2FidW0uY29t/LmJyL3Byb2R1dG9z/L2ZvdG9zLzM4Mjc1/Mi9tZW1vcmlhLWNv/cnNhaXItdmVuZ2Vh/bmNlLXJnYi1wcm8t/c2wtMTZnYi0zMjAw/bWh6LWRkcjQtYzE2/LXByZXRvLWNtaDE2/Z3g0bTJlMzIwMGMx/Nl8xNjY1NDkwMDUx/X2dnLmpwZw" alt="Memória RAM">
+    <div class="info-produto">
+    <span class="categoria">Hardware</span>
+    <h3>Memória RAM Corsair 16GB 3200MHz RGB</h3>
+    <p class="preco-antigo">De R$ 399,00 por:</p>
+    <p class="preco-novo">R$ 259,00</p>
+    <p class="pagamento">à vista no PIX</p>
+    </div>
+    </a>
+    <button class="btn-comprar" onclick="adicionarAoCarrinho('RAM Corsair 16GB', 259.00, 'https://imgs.search.brave.com/AhqJTRyMKpiBlwTYXJpVuWdjS_Q2khTT3gDPnMLl_FE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMua2FidW0uY29t/LmJyL3Byb2R1dG9z/L2ZvdG9zLzM4Mjc1/Mi9tZW1vcmlhLWNv/cnNhaXItdmVuZ2Vh/bmNlLXJnYi1wcm8t/c2wtMTZnYi0zMjAw/bWh6LWRkcjQtYzE2/LXByZXRvLWNtaDE2/Z3g0bTJlMzIwMGMx/Nl8xNjY1NDkwMDUx/X2dnLmpwZw')">🛒 COMPRAR</button>
+    </div>
+
+    <div class="card-produto">
+    <a href="#ssd" class="link-produto">
+    <img src="https://imgs.search.brave.com/iOcDZCgXndUHxUr8bKkz-zRFiM8HD-YOfS33tGbFPf8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9uZXRz/aG9waW5mb3JtYXRp/Y2EuY29tLmJyL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDI1LzEy/LzgxcWVnNWloaW1s/LWFjLXNsMTUwMC03/MGFiNDAuanBn" alt="SSD NVMe">
+    <div class="info-produto">
+    <span class="categoria">Hardware</span>
+    <h3>SSD NVMe Kingston 1TB Leitura 3500MB/s</h3>
+    <p class="preco-antigo">De R$ 549,00 por:</p>
+    <p class="preco-novo">R$ 399,00</p>
+    <p class="pagamento">à vista no PIX</p>
+    </div>
+    </a>
+    <button class="btn-comprar" onclick="adicionarAoCarrinho('SSD NVMe 1TB', 399.00, 'https://imgs.search.brave.com/iOcDZCgXndUHxUr8bKkz-zRFiM8HD-YOfS33tGbFPf8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9uZXRz/aG9waW5mb3JtYXRp/Y2EuY29tLmJyL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDI1LzEy/LzgxcWVnNWloaW1s/LWFjLXNsMTUwMC03/MGFiNDAuanBn')">🛒 COMPRAR</button>
+    </div>
+
+    </div>
+    </section>
+    </main>
+
+    <footer>
+    <div class="footer-content">
+    <h3>Eletrônicos do jc</h3>
+    <p>O melhor hardware e smartphones para você dominar no game.</p>
+    <p>&copy; 2026 Desenvolvido por JC para projeto acadêmico.</p>
+    </div>
+    </footer>
+
+
+    <div class="overlay" id="overlay-carrinho"></div>
+
+    <aside class="carrinho-painel" id="painel-carrinho" aria-hidden="true">
+        <div class="carrinho-cabecalho">
+            <div>
+                <span class="carrinho-label">SEU PEDIDO</span>
+                <h2>Meu Carrinho <span id="quantidade-cabecalho">(0 itens)</span></h2>
+            </div>
+            <button class="btn-fechar-carrinho" id="btn-fechar-carrinho" type="button" aria-label="Fechar carrinho">✕</button>
+        </div>
+
+        <div class="carrinho-conteudo" id="itens-carrinho"></div>
+
+        <div class="carrinho-rodape">
+            <div class="resumo-linha">
+                <span>Subtotal</span>
+                <strong id="subtotal-carrinho">R$ 0,00</strong>
+            </div>
+            <div class="resumo-linha total">
+                <span>Total</span>
+                <strong id="total-carrinho">R$ 0,00</strong>
+            </div>
+            <p class="aviso-pagamento">Pagamento demonstrativo para projeto acadêmico.</p>
+            <button class="btn-finalizar" id="btn-finalizar" type="button" disabled>FINALIZAR PEDIDO</button>
+            <button class="btn-limpar" id="btn-limpar-carrinho" type="button">LIMPAR CARRINHO</button>
+        </div>
+    </aside>
+
+    <script src="main.js"></script>
+</body>
+</html>
